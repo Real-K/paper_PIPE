@@ -1,0 +1,92 @@
+{
+ "davis-buyouts": {
+  "authors": "Kaplan, Steven N; Strömberg, Per",
+  "year": 2009,
+  "venue": "Journal of Economic Perspectives",
+  "volume": "23",
+  "issue": "1",
+  "page": "121-146",
+  "doi": "10.1257/jep.23.1.121",
+  "title": "Leveraged Buyouts and Private Equity"
+ },
+ "chaplinsky": {
+  "authors": "Chaplinsky, Susan; Haushalter, David",
+  "year": 2010,
+  "venue": "Review of Financial Studies",
+  "volume": "23",
+  "issue": "7",
+  "page": "2789-2820",
+  "doi": "10.1093/rfs/hhq035",
+  "title": "Financing under Extreme Risk: Contract Terms and Returns to Private Investments in Public Equity"
+ },
+ "kim-weisbach": {
+  "authors": "KIM, W; WEISBACH, M",
+  "year": 2008,
+  "venue": "Journal of Financial Economics",
+  "volume": "87",
+  "issue": "2",
+  "page": "281-307",
+  "doi": "10.1016/j.jfineco.2006.09.010",
+  "title": "Motivations for public equity offers: An international perspective☆"
+ },
+ "callaway-sa": {
+  "authors": "Callaway, Brantly; Sant’Anna, Pedro H.C.",
+  "year": 2021,
+  "venue": "Journal of Econometrics",
+  "volume": "225",
+  "issue": "2",
+  "page": "200-230",
+  "doi": "10.1016/j.jeconom.2020.12.001",
+  "title": "Difference-in-Differences with multiple time periods"
+ },
+ "santanna-zhao": {
+  "authors": "Sant’Anna, Pedro H.C.; Zhao, Jun",
+  "year": 2020,
+  "venue": "Journal of Econometrics",
+  "volume": "219",
+  "issue": "1",
+  "page": "101-122",
+  "doi": "10.1016/j.jeconom.2020.06.003",
+  "title": "Doubly robust difference-in-differences estimators"
+ },
+ "callaway-li": {
+  "authors": "Callaway, Brantly; Li, Tong",
+  "year": 2019,
+  "venue": "Quantitative Economics",
+  "volume": "10",
+  "issue": "4",
+  "page": "1579-1618",
+  "doi": "10.3982/qe935",
+  "title": "Quantile treatment effects in difference in differences models with panel data"
+ },
+ "dh-1992": {
+  "authors": "Davis, S. J.; Haltiwanger, J.",
+  "year": 1992,
+  "venue": "The Quarterly Journal of Economics",
+  "volume": "107",
+  "issue": "3",
+  "page": "819-863",
+  "doi": "10.2307/2118365",
+  "title": "Gross Job Creation, Gross Job Destruction, and Employment Reallocation"
+ },
+ "graham": {
+  "authors": "GRAHAM, JOHN R.; KIM, HYUNSEOB; LI, SI; QIU, JIAPING",
+  "year": 2023,
+  "venue": "The Journal of Finance",
+  "volume": "78",
+  "issue": "4",
+  "page": "2087-2137",
+  "doi": "10.1111/jofi.13251",
+  "title": "Employee Costs of Corporate Bankruptcy"
+ },
+ "cho-kim": {
+  "authors": "Otsubo, Minoru",
+  "year": 2017,
+  "venue": "Pacific-Basin Finance Journal",
+  "volume": "41",
+  "issue": null,
+  "page": "75-92",
+  "doi": "10.1016/j.pacfin.2016.12.006",
+  "title": "Why do firms underwrite private placement shares of other firms? Case of Japanese firms"
+ }
+}

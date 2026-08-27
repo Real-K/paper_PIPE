@@ -1,0 +1,30 @@
+{
+ "mean_event": -0.082,
+ "mean_placebo": -0.052,
+ "diff_mean": -0.03,
+ "diff_mean_ci": [
+  -0.0914,
+  0.0307
+ ],
+ "p10_event": -0.526,
+ "p10_placebo": -0.2614,
+ "diff_p10": -0.2647,
+ "diff_p10_ci": [
+  -0.3901,
+  -0.0945
+ ],
+ "p25_event": -0.1957,
+ "p25_placebo": -0.1265,
+ "diff_p25": -0.0692,
+ "diff_p25_ci": [
+  -0.1703,
+  0.0103
+ ],
+ "median_event": -0.0176,
+ "median_placebo": -0.0169,
+ "diff_median": -0.0007,
+ "diff_median_ci": [
+  -0.0343,
+  0.0431
+ ]
+}

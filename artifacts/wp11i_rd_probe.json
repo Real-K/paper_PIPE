@@ -1,0 +1,8 @@
+{
+ "n_window": 12480,
+ "left_p": 0.0,
+ "right_p": 0.0076,
+ "jump": -0.0076,
+ "fisher_p": 1.0,
+ "verdict": "점프 유의&큼 → fuzzy RD 후보; 아니면 기록 후 종료(§15: 억지 IV 금지)"
+}

@@ -1,0 +1,7 @@
+{
+ "id": "WP13i",
+ "n_cases": 30,
+ "n_with_struct_filing": 13,
+ "note": "자동 판정 아님 — 공시 제목 탐지 결과이며, 사람이 원문을 확인해 최종 코딩한다. 탐지어는 회사분할·합병·영업양수도·주식교환/이전·자산양수도.",
+ "window": "event −6 ~ +12 months · pblntf_ty A/B/C/I"
+}

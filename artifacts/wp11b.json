@@ -1,0 +1,12 @@
+{
+ "n": 360,
+ "funding_found": 196,
+ "lag_median": 8.0,
+ "lag_p25": 5.0,
+ "lag_p75": 14.0,
+ "tail_order": {
+  "deterioration_before_funding": 3,
+  "collapse_after_funding": 18,
+  "no_onset_or_no_funding": 339
+ }
+}

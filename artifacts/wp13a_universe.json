@@ -1,0 +1,87 @@
+{
+ "id": "WP13a",
+ "flow": [
+  {
+   "step": "Treatment set (first third-party allotment per firm)",
+   "n": 415,
+   "note": "389 paid-in increases · 26 convertible bonds"
+  },
+  {
+   "step": "With identifiable event date",
+   "n": 382,
+   "note": "r1b 357 · document-parsed r1c 25"
+  },
+  {
+   "step": "Within the stated 2015–2025 window",
+   "n": 360,
+   "note": "22 dated events fall outside it (18 before 2015, 4 in 2026) and enter no analysis"
+  },
+  {
+   "step": "Event month inside NPS panel (2015-11..2026-05)",
+   "n": 321,
+   "note": "61 precede/follow the panel"
+  },
+  {
+   "step": "Window feasible (e−13 ≥ start, e+12 ≤ end)",
+   "n": 260,
+   "note": ""
+  },
+  {
+   "step": "Employment sample, primary rule",
+   "n": 210,
+   "note": "obs at e−1 & e−13; ≥6 baseline months; ≥3 of months +7..+12"
+  },
+  {
+   "step": "— of which paid-in equity only",
+   "n": 209,
+   "note": "1 CB"
+  },
+  {
+   "step": "— of which complete 12-month follow-up",
+   "n": 208,
+   "note": "2 with gaps; 2 exit the panel before month +12"
+  },
+  {
+   "step": "— of which document-parsed dates (r1c)",
+   "n": 5,
+   "note": ""
+  },
+  {
+   "step": "Loose rule (≥3 pre & ≥3 post), for reference",
+   "n": 254,
+   "note": "legacy Table 1 '215' analogue"
+  },
+  {
+   "step": "Announcement CAR sample",
+   "n": 317,
+   "note": "overlap with employment sample 182"
+  },
+  {
+   "step": "Purpose-classified (rescue+growth)",
+   "n": 221,
+   "note": "rescue 174 · growth 47"
+  },
+  {
+   "step": "Stake measured",
+   "n": 201,
+   "note": ""
+  },
+  {
+   "step": "Payment date parsed",
+   "n": 196,
+   "note": ""
+  },
+  {
+   "step": "BHAR sample",
+   "n": 209,
+   "note": "delisting-suspect 28"
+  },
+  {
+   "step": "Exit the NPS panel within 12 months (all in-range events)",
+   "n": 11,
+   "note": "4 pass the loose rule; 2 pass the primary rule"
+  }
+ ],
+ "rule": "emp_primary: e-13>=0 & e+12<NM & obs(e-1,e-13) & pre(-12..-1)>=6 & post(+7..+12)>=3",
+ "n_dec_note": "n_dec = r1_events 자본증가 결정공시 건수(모든 방식) — 반복 제3자배정 여부는 미측정(third_dates 비어 있음)"
+}

@@ -1,0 +1,15 @@
+{
+ "id": "WP13g",
+ "figures": [
+  "fig1_gradient_vs_tail",
+  "fig2_collapse_curve",
+  "fig3_same_state"
+ ],
+ "sources": {
+  "fig1": "wp11fg.json (g_placebo_grid, f_honest)",
+  "fig2": "wp11d.json (event/placebo/ddd, sup-t uniform bands)",
+  "fig3": "wp12b.json (B_distress_1, B_distress_0, E_pool_distress)"
+ },
+ "design": "흑백 인쇄 대응(표식·선종 구분, 색상 단독 부호화 없음) · 등가밴드 ±0.048(평균)/±0.05(꼬리) 사전 고정 · 벡터 PDF + 300dpi PNG",
+ "note": "표와 비중복: 표는 수치, 그림은 형태(기울기 vs 점프·임계 비의존성·중앙 일치와 꼬리 이탈)"
+}

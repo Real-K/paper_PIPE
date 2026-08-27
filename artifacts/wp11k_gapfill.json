@@ -1,0 +1,16 @@
+{
+ "absent26": {
+  "n": 26,
+  "survival": 20,
+  "growth": 2,
+  "note": "가격패널 부재는 2026 시점 측정 — 이벤트+12개월 시점 관측여부는 원자료로 확정 불가(한계 명시)"
+ },
+ "adverse_bound": {
+  "max_observed_bhar": 10.7619,
+  "survival_mean": 0.0658,
+  "growth_mean": 0.5108,
+  "diff": -0.445,
+  "welch_p": 0.4104,
+  "verdict": "부호 역전"
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "observed": {
+  "survival": {
+   "n": 99,
+   "mean": 0.2811,
+   "ci": [
+    -0.0154,
+    0.6318
+   ],
+   "median": -0.1545
+  },
+  "growth": {
+   "n": 28,
+   "mean": -0.2214,
+   "ci": [
+    -0.3463,
+    -0.0825
+   ],
+   "median": -0.3243
+  },
+  "welch_p": 0.0072
+ },
+ "lower_bound_delist=-100%": {
+  "survival": {
+   "n": 119,
+   "mean": 0.0658,
+   "ci": [
+    -0.1948,
+    0.3861
+   ],
+   "median": -0.2685
+  },
+  "growth": {
+   "n": 30,
+   "mean": -0.2733,
+   "ci": [
+    -0.4055,
+    -0.1234
+   ],
+   "median": -0.3308
+  },
+  "welch_p": 0.0426
+ },
+ "delist_rates": {
+  "survival": 0.168,
+  "growth": 0.067,
+  "fisher_p": 0.2492,
+  "tail": 0.212,
+  "rest": 0.098,
+  "tail_fisher_p": 0.0511
+ }
+}

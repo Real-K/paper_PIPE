@@ -1,0 +1,52 @@
+{
+ "id": "P016-A-CAR",
+ "n_treated_ticker": 360,
+ "n_car": 317,
+ "windows": {
+  "m1_p1": {
+   "n": 317,
+   "mean_CAR": 0.03,
+   "t": 3.96,
+   "ci95": [
+    0.0154,
+    0.0451
+   ],
+   "median": 0.0052,
+   "pct_pos": 0.549
+  },
+  "e0_p1": {
+   "n": 317,
+   "mean_CAR": 0.0198,
+   "t": 3.3,
+   "ci95": [
+    0.0084,
+    0.032
+   ],
+   "median": 0.0027,
+   "pct_pos": 0.527
+  },
+  "e0_p5": {
+   "n": 317,
+   "mean_CAR": 0.0323,
+   "t": 3.37,
+   "ci95": [
+    0.0143,
+    0.0515
+   ],
+   "median": 0.0033,
+   "pct_pos": 0.508
+  },
+  "e0_p20": {
+   "n": 317,
+   "mean_CAR": 0.0206,
+   "t": 1.48,
+   "ci95": [
+    -0.0064,
+    0.0484
+   ],
+   "median": 0.0,
+   "pct_pos": 0.498
+  }
+ },
+ "market_proxy": "equal-weighted cross-sectional mean (kospi+kosdaq)"
+}

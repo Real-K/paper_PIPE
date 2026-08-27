@@ -1,0 +1,33 @@
+{
+ "A_stake": {
+  "n_stake": 201,
+  "median": 0.0616,
+  "p25": 0.0309,
+  "p75": 0.1267,
+  "p90": 0.2276,
+  "ge30": 0.045,
+  "ge50": 0.005,
+  "lockup_Y": 0.0
+ },
+ "B_car": {
+  "proxy": "exchange index (Naver, value-weighted)",
+  "n_car": 317,
+  "all_car11_mean": 0.0309,
+  "all_bmp_t11": 4.18,
+  "purpose_full": {
+   "n_surv": 174,
+   "n_grow": 47,
+   "surv_car11": 0.0589,
+   "grow_car11": 0.0159,
+   "diff": 0.043,
+   "welch_p": 0.0124,
+   "surv_bmp_t": 4.48,
+   "grow_bmp_t": 1.62
+  },
+  "purpose_full_05": {
+   "surv": 0.0686,
+   "grow": 0.0036,
+   "welch_p": 0.0049
+  }
+ }
+}

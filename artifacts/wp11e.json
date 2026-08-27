@@ -1,0 +1,40 @@
+{
+ "G4": {
+  "oos_mse": {
+   "M1_match": 0.03929,
+   "M2_trend": 0.13681,
+   "M3_industry": 0.04897,
+   "M4_synth": 0.10667
+  },
+  "winner": "M1_match",
+  "n_event": 136,
+  "event_effect": -0.0954,
+  "ci": [
+   -0.1738,
+   -0.0212
+  ],
+  "p10": -0.6308,
+  "median": -0.0348
+ },
+ "G5a_trajbreak": {
+  "n_t": 208,
+  "n_c": 1733,
+  "tau_accel": -0.0787,
+  "ci": [
+   -0.1342,
+   -0.0265
+  ],
+  "accel_p10_treated": -0.4929,
+  "accel_p10_ctrl": -0.2091
+ },
+ "G5b_dr": {
+  "n_treat": 210,
+  "n_ctrl": 3000,
+  "ATT_dr": -0.0711,
+  "ci": [
+   -0.1223,
+   -0.0222
+  ],
+  "note": "AIPW, distress 공변량(lev·roa·cash·impaired·loss)+ls·pg·yr. 재무커버 있는 treated만."
+ }
+}

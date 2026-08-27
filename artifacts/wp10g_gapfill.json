@@ -1,0 +1,25 @@
+{
+ "bhar_tests": {
+  "observed": {
+   "mannwhitney_p": 0.0553,
+   "boot_diff": 0.5026,
+   "boot_ci": [
+    0.1714,
+    0.8836
+   ]
+  },
+  "bound": {
+   "mannwhitney_p": 0.4873,
+   "boot_diff": 0.3391,
+   "boot_ci": [
+    0.0434,
+    0.6967
+   ]
+  }
+ },
+ "residual_bucket": {
+  "n": 93,
+  "mean_car11": -0.0152,
+  "median": -0.0018
+ }
+}

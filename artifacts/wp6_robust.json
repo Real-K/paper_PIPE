@@ -1,0 +1,63 @@
+{
+ "id": "P016-WP6",
+ "date": "2026-08-23",
+ "SESOI": 0.0559,
+ "headline_reproduce": {
+  "n": 205,
+  "ATT_plus12": -0.0663,
+  "ci95": [
+   -0.1211,
+   -0.0279
+  ]
+ },
+ "A_gross_flow": {
+  "cum_hire_over_base_ATT": {
+   "point": -0.0445,
+   "ci95": [
+    -0.1271,
+    0.0416
+   ]
+  },
+  "cum_sep_over_base_ATT": {
+   "point": 0.0236,
+   "ci95": [
+    -0.0236,
+    0.0695
+   ]
+  },
+  "interpretation": "음(−)이면 채용동결(채용↓)이 채널; 이탈 ATT 양(+)이면 layoff 채널."
+ },
+ "B_rosenbaum": {
+  "gamma_star": 1.05,
+  "p_at_gamma1": 0.0393,
+  "T": 9062.0,
+  "n": 205
+ },
+ "C_placebo": "n<3 (검정력 없음)",
+ "D_threshold_sensitivity": {
+  "ge1pre_ge1post": {
+   "n": 205,
+   "ATT_plus12": -0.0663,
+   "ci95": [
+    -0.1188,
+    -0.0138
+   ]
+  },
+  "basecomplete_ge6post": {
+   "n": 205,
+   "ATT_plus12": -0.0469,
+   "ci95": [
+    -0.0987,
+    0.0041
+   ]
+  },
+  "basecomplete_ge12post": {
+   "n": 204,
+   "ATT_plus12": -0.0726,
+   "ci95": [
+    -0.1239,
+    -0.0148
+   ]
+  }
+ }
+}

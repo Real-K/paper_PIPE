@@ -1,0 +1,74 @@
+{
+ "id": "P016-WP10c",
+ "listed_universe": 2625,
+ "listed_ctrl_pool": 1321,
+ "common_support": 1250,
+ "SESOI_listed": 0.0472,
+ "sd12_listed": 0.2361,
+ "ATT_avg1_12": {
+  "point": -0.0563,
+  "ci": [
+   -0.0948,
+   -0.0184
+  ],
+  "n": 210
+ },
+ "ATT_avg7_12": {
+  "point": -0.0821,
+  "ci": [
+   -0.1313,
+   -0.0359
+  ],
+  "n": 210
+ },
+ "balance_max_abs_smd": 0.0359,
+ "pretrend_pass": "12/12",
+ "permutation": {
+  "p10": {
+   "actual": -0.526,
+   "null_mean": -0.2139,
+   "null_ci": [
+    -0.281,
+    -0.1624
+   ],
+   "P_null_le_actual": 0.0
+  },
+  "p25": {
+   "actual": -0.1957,
+   "null_mean": -0.0996,
+   "null_ci": [
+    -0.128,
+    -0.0744
+   ],
+   "P_null_le_actual": 0.0
+  },
+  "p50": {
+   "actual": -0.0173,
+   "null_mean": -0.0124,
+   "null_ci": [
+    -0.0329,
+    0.0075
+   ],
+   "P_null_le_actual": 0.316
+  },
+  "p75": {
+   "actual": 0.0816,
+   "null_mean": 0.0838,
+   "null_ci": [
+    0.0542,
+    0.1223
+   ],
+   "P_null_le_actual": 0.483
+  },
+  "p90": {
+   "actual": 0.2445,
+   "null_mean": 0.2291,
+   "null_ci": [
+    0.1641,
+    0.3169
+   ],
+   "P_null_le_actual": 0.6875
+  }
+ },
+ "caveat": "비스폰서 제3자배정 잔존 가능(오염방향=귀무쪽, 보수적). 완전 purge는 DART 전수 후속."
+}

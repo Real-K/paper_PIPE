@@ -1,0 +1,30 @@
+{
+ "n_first": 415,
+ "n_with_investor": 367,
+ "lead_type": {
+  "Corporation": 145,
+  "Other/Unclassified": 56,
+  "Venture Capital": 50,
+  "PE/Buyout": 43,
+  "Corporation (listed)": 19,
+  "Asset Manager": 13,
+  "Investment Bank": 13,
+  "VC-Backed Company": 7,
+  "Holding Company": 3,
+  "Lender/Debt Provider": 3,
+  "Corporate Venture Capital": 3,
+  "Hedge Fund": 2,
+  "Family Office": 2,
+  "Limited Partner": 2,
+  "Special Purpose Acquisition Company (SPAC)": 1,
+  "PE-Backed Company": 1,
+  "Mezzanine": 1,
+  "Fund/Partnership": 1,
+  "Growth/Expansion": 1,
+  "Government": 1
+ },
+ "broad": {
+  "strategic/other": 240,
+  "financial": 127
+ }
+}

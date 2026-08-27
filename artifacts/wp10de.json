@@ -1,0 +1,31 @@
+{
+ "d1_placebo_t24": {
+  "n": 142,
+  "mean": -0.052,
+  "ci": [
+   -0.0932,
+   -0.0176
+  ],
+  "p10": -0.2614,
+  "p25": -0.1265,
+  "p50": -0.0169,
+  "note": "wp10c null 대비: null p10 −0.214[−0.276,−0.165]·p25 −0.102[−0.129,−0.075]. placebo가 null 범위면 통과."
+ },
+ "d2_pre_downside": {
+  "treated_p10": -0.0364,
+  "control_p10": -0.0288,
+  "treated_p90": 0.0465,
+  "control_p90": 0.0412,
+  "treated_sd": 0.0583,
+  "control_sd": 0.0934,
+  "levene_p": 0.1147,
+  "note": "pre 12m 월간 log고용변화 분포 — 처치가 사전부터 좌측꼬리 두꺼우면 distress-선택 신호."
+ },
+ "e_car_controls": {
+  "n": 182,
+  "survival_coef": 0.0601,
+  "se": 0.0195,
+  "p": 0.0021,
+  "controls": "stake, log(1+dealsize), logsize(firm), year FE. (mktcap·discount 미보유→한계 명시; kosdaq은 지수프록시에 이미 반영)"
+ }
+}

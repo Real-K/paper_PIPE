@@ -4,6 +4,8 @@ Code and result artifacts for *Rescue Premiums and Employment Tails: Third-Party
 
 ## Start here — the notebooks render on GitHub
 
+**Current FRL submission** (`notebooks_FRL/`): [`01_paper_FRL.ipynb`](notebooks_FRL/01_paper_FRL.ipynb) rebuilds Figure 1 and Table 1 of the FRL manuscript and asserts every printed number; [`02_appendix_FRL.ipynb`](notebooks_FRL/02_appendix_FRL.ipynb) does the same for appendix Tables A1–E1. The `notebooks/` folder below reflects the earlier full-length manuscript.
+
 | Notebook | Contents |
 |---|---|
 | [`notebooks/01_main_tables.ipynb`](notebooks/01_main_tables.ipynb) | Tables 1–5 of the manuscript |

@@ -9,6 +9,7 @@ Code and result artifacts for *Rescue Premiums and Employment Tails: Third-Party
 | [`notebooks/01_main_tables.ipynb`](notebooks/01_main_tables.ipynb) | Tables 1–5 of the manuscript |
 | [`notebooks/02_figures.ipynb`](notebooks/02_figures.ipynb) | Figures 1–3 |
 | [`notebooks/03_appendix_tables.ipynb`](notebooks/03_appendix_tables.ipynb) | Appendix Tables A1–F1 and the robustness batteries |
+| [`notebooks/04_comment_robustness.ipynb`](notebooks/04_comment_robustness.ipynb) | Referee-comment analyses (2026-09-02): sub-window tail dynamics, four-benchmark threshold grids, influence of extreme recipients, sample-selection comparison |
 
 **Outputs are stored in the notebooks**, so every table and figure is visible on GitHub without installing anything or obtaining any data. Each notebook reads only the aggregate result artifacts in [`artifacts/`](artifacts/) — no licensed microdata is used or required.
 
@@ -18,7 +19,7 @@ To re-execute them yourself: Python 3.11+, `pandas`, `numpy`, `matplotlib`. Run 
 
 ```
 notebooks/    tables and figures, rebuilt from artifacts, with outputs stored
-artifacts/    47 aggregate result files (JSON) — every number in the paper traces to one of these
+artifacts/    49 aggregate result files (JSON) — every number in the paper traces to one of these
 code/
   pipeline/     the full analysis pipeline (requires licensed inputs; see DATA_ACCESS.md)
   verification/ two checkers run against the manuscript before submission

@@ -51,3 +51,6 @@ Aggregate result files. Every number in the paper traces to one of these. Files 
 | `wp9d_car_predict.json` |  | 603 | **superseded** — see wp13d/wp13e/wp13f |
 | `wp9e_narrative.json` |  | 1,737 | current |
 | `wp9f_bhar_bounds.json` |  | 698 | **superseded** — see wp13d/wp13e/wp13f |
+
+| `wp14_comment_battery.json` | `cb178ad383022a71` | 7,244 | `wp14_comment_battery.py` | Referee-comment battery (2026-09-02) |
+| `wp14a_subwindow.json` | `9a2c781ea7ba0983` | 757 | `wp14a_subwindow_tails.py` | Referee-comment battery (2026-09-02) |

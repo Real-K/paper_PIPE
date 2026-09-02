@@ -9,7 +9,7 @@ C-A(처치우주 재구축)로 표본이 바뀌면 원고 곳곳의 수치가 �
 """
 import json,os,re,sys,glob
 from decimal import Decimal,ROUND_HALF_UP
-BASE=os.environ.get("P016_BASE", os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))   # 원 경로는 제거했다 — 실행 시 P016_BASE 로 지정하거나 기본값 사용
+BASE="/mnt/c/obsidian/00 Academic Research/paper014-writing-project"
 NEW=f"{BASE}/shared/outputs/pipe_wp13_2026-08-26"; W12=f"{BASE}/shared/outputs/pipe_wp12_2026-08-26"
 SUB=f"{BASE}/papers/P016_pipe-employment/10_submission/submission_pbfj"
 POOL={}
@@ -34,12 +34,25 @@ def harvest(o,src):
 SUPERSEDED={"wp9f_bhar_bounds","wp9b_disappearance","wp9d_car_predict","wp11i_rd_probe",
             "wp11n_allottee_moderator","allottee_summary","wp8c_purpose_moderator","wp10g_gapfill",
             "wp11m_datefix_impact"}   # wp13d/e/f 로 대체됨. wp11c 는 제외하지 않는다 — 부록 D Table D1 Panel B 가 구 비교군을 **의도적으로** 보고하므로(rule 10) 정당한 인용원이다.
-srcs=[p for p in sorted(glob.glob(f"{NEW}/*.json"))+sorted(glob.glob(f"{W12}/*.json"))
-      if os.path.basename(p)[:-5] not in SUPERSEDED]
-print(f"폐기 제외 {len(SUPERSEDED)}종:",", ".join(sorted(SUPERSEDED)))
+_all=sorted(glob.glob(f"{NEW}/*.json"))+sorted(glob.glob(f"{W12}/*.json"))
+srcs=[p for p in _all if os.path.basename(p)[:-5] not in SUPERSEDED]
+dead_srcs=[p for p in _all if os.path.basename(p)[:-5] in SUPERSEDED]
+print(f"폐기 제외 {len(SUPERSEDED)}종 · 디스크에서 발견 {len(dead_srcs)}개:",", ".join(sorted(SUPERSEDED)))
+LIVE_RAW=[]; DEAD_RAW={}
+def raw(o,sink):
+    if isinstance(o,dict):
+        for v in o.values(): raw(v,sink)
+    elif isinstance(o,(list,tuple)):
+        for v in o: raw(v,sink)
+    elif isinstance(o,(int,float)) and not isinstance(o,bool): sink.append(float(o))
 for p in srcs:
-    try: harvest(json.load(open(p,encoding="utf-8")),os.path.basename(p)[:-5])
+    try:
+        d=json.load(open(p,encoding="utf-8")); harvest(d,os.path.basename(p)[:-5]); raw(d,LIVE_RAW)
     except Exception as e: print(f"  (경고) {os.path.basename(p)}: {e}")
+for p in dead_srcs:
+    try:
+        sink=[]; raw(json.load(open(p,encoding="utf-8")),sink); DEAD_RAW[os.path.basename(p)[:-5]]=sink
+    except Exception as e: print(f"  (경고, 폐기) {os.path.basename(p)}: {e}")
 # 표본 흐름 정수 등 CSV 행수도 정당한 인용원
 for p in sorted(glob.glob(f"{NEW}/*.csv")):
     try: add(sum(1 for _ in open(p,encoding="utf-8-sig"))-1,os.path.basename(p)+":rows")
@@ -60,6 +73,35 @@ print(f"풀 {len(POOL):,}개 값 · 출처 {len(srcs)} JSON")
 # 풀 대조만으로는 못 잡는 것들이 있다. 정수(26·205·117)는 다른 출처와 우연히 매칭되고,
 # **철회된 주장**은 폐기 JSON 을 지워도 새 산출에 우연히 같은 값이 있으면 통과한다.
 # 그래서 "원고에 남아 있으면 안 되는 문자열" 을 직접 차단한다. (2026-08-27, WP13e/f 결과 반영)
+
+# --- 폐기 산출물에서 차단 수치 자동도출 (P-014 build/verify_draft.py 이식, 2026-08-27) --------
+# 손으로 관리하는 RETRACTED 목록은 다음에 또 놓친다. 폐기 JSON 을 풀에서 빼는 것만으로는
+# **같은 값이 살아있는 다른 산출물에도 있으면** 여전히 통과하므로, 폐기 JSON 의 값 자체를 막는다.
+# 안전장치 두 겹: (a) 살아있는 값과 겹치면 제외 — 우연 일치를 오탐하지 않는다.
+# (b) 소수 3자리 이상이거나 4자리 이상 정수인 '특징적인' 값만 — 2·26·205 같은 흔한 수를 막으면
+#     검증기가 쓸모없어진다. (c) 살아있는 값이 **반올림해서** 폐기값과 같아지는 경우도 살려둔다.
+def build_stale(live_raw, dead_by_src):
+    live=set(round(abs(x),6) for x in live_raw)
+    def distinctive(x):
+        a=abs(x)
+        if a!=a or a>1e11: return None
+        st=repr(float(x)).rstrip("0").rstrip(".") if "." in repr(float(x)) else repr(float(x))
+        frac=len(st.split(".")[1]) if "." in st else 0
+        if not (frac>=3 or (frac==0 and a>=1000)): return None
+        return round(a,6), frac
+    out={}
+    for src,vals in dead_by_src.items():
+        for x in vals:
+            d=distinctive(x)
+            if d is None: continue
+            v,nd=d
+            if v in live: continue
+            if any(round(abs(y),nd)==v for y in live_raw): continue   # 반올림 충돌
+            out.setdefault(v,src)
+    return out
+STALE=build_stale(LIVE_RAW,DEAD_RAW)
+print(f"폐기 수치 자동도출 {len(STALE)}종 (폐기 JSON {len(DEAD_RAW)}개 · 살아있는 값 {len(set(round(abs(x),6) for x in LIVE_RAW)):,}종과 대조)")
+
 RETRACTED=[
  ("21.2",   "철회: 상폐의심의 고용꼬리 집중 — 신 15.1%(8/53) vs 12.8%(20/156) Fisher p=0.6472 (wp13e)"),
  ("Twenty-six of 205", "구 우주: 신 Twenty-eight of 209 (13.4%) (wp13e)"),
@@ -83,12 +125,14 @@ def check_retracted(paths):
     return hits
 
 SKIP_CTX=re.compile(r"(Section|Table|Panel|Appendix|Figure|Equation|footnote|Article|Act|20[0-2]\d|19[89]\d)",re.I)
-NUM=re.compile(r"(?<![\w.])[-−+]?\d{1,3}(?:,\d{3})*(?:\.\d+)?(?![\w])")
+# 4자리 이상을 쉼표 없이 쓴 수(12480)를 종전 정규식이 통째로 놓쳤다 — 그래서 폐기 RD 표본
+# 12,480 은 문자열 차단으로만 막히고 있었다. 쉼표군 또는 연속 숫자열을 모두 잡는다.
+NUM=re.compile(r"(?<![\w.])[-−+]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?(?![\w])")
 def norm(s): return float(s.replace("−","-").replace(",","").replace("+",""))
 targets=sys.argv[1:] or [f"{SUB}/PBFJ_manuscript_anonymized.md",f"{SUB}/PBFJ_online_supplement.md",f"{SUB}/PBFJ_cover_letter.md",f"{SUB}/PBFJ_highlights.md"]
-tot=bad=0
+tot=bad=stale_tot=0
 for t in targets:
-    miss=[]
+    miss=[]; stale_hits=[]
     inref=False
     for i,ln in enumerate(open(t,encoding="utf-8"),1):
         if re.match(r"#+\s*References",ln): inref=True
@@ -104,14 +148,17 @@ for t in targets:
             w=ln[max(0,m.start()-28):m.start()]
             if SKIP_CTX.search(w) and float(v).is_integer() and abs(v)<40: continue  # 절·표 번호
             tot+=1
+            av=round(abs(v),6)
+            if av in STALE: stale_hits.append((i,s,STALE[av],ln.strip()[:120]))
             if round(v,6) in POOL: continue
             miss.append((i,s,ln.strip()[:150]))
-    bad+=len(miss)
-    print(f"\n### {os.path.basename(t)} — 미매칭 {len(miss)}")
+    bad+=len(miss); stale_tot+=len(stale_hits)
+    print(f"\n### {os.path.basename(t)} — 미매칭 {len(miss)} · 폐기수치 {len(stale_hits)}")
     for i,s,ctx in miss[:200]: print(f"  L{i:<4} {s:>12}   {ctx}")
+    for i,s,src,ctx in stale_hits[:200]: print(f"  🔴 L{i:<4} {s:>12}  폐기 {src} 에서만 나오는 값   {ctx}")
 print("\n[철회·폐기 문자열 검사]")
 rh=check_retracted(targets)
 if not rh: print("  없음")
-print(f"\n총 검사 {tot} · 미매칭 {bad} · 철회문자열 {rh}")
+print(f"\n총 검사 {tot} · 미매칭 {bad} · 철회문자열 {rh} · 폐기수치 {stale_tot}")
 print("  주: '127'(NPS 패널 개월수)은 JSON 에 없는 자료 사실이라 항상 미매칭으로 잡힌다 — 마감 기준 미매칭 3.")
-sys.exit(1 if (bad>3 or rh) else 0)
+sys.exit(1 if (bad>3 or rh or stale_tot) else 0)

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "Rescue Premiums and Employment Tails: replication materials"
+message: "If you use these materials, please cite the archived release."
+type: software
+license: MIT
+repository-code: "https://github.com/Real-K/paper_PIPE"
+abstract: >-
+  Notebooks, aggregate result artifacts and the analysis pipeline for
+  "Rescue Premiums and Employment Tails: Third-Party Equity Placements in
+  Listed Korean Firms". The notebooks rebuild every table and figure from the
+  aggregate artifacts with outputs stored, so results can be checked without
+  any licensed input.
+keywords:
+  - private placements
+  - third-party allotment
+  - financial distress
+  - employment
+  - Korea
+  - replication
+authors:
+  - family-names: "PLACEHOLDER"
+    given-names: "PLACEHOLDER"
+    affiliation: ""
+version: "1.0.0"

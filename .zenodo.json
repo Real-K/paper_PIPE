@@ -1,0 +1,19 @@
+{
+  "title": "Rescue Premiums and Employment Tails: replication materials for third-party equity placements in listed Korean firms",
+  "description": "<p>Code and aggregate result artifacts for the paper <i>Rescue Premiums and Employment Tails: Third-Party Equity Placements in Listed Korean Firms</i>.</p><p>Three Jupyter notebooks rebuild every table and figure in the paper from the aggregate result artifacts, with outputs stored, so the reported results can be inspected without obtaining any licensed data. The repository also contains the full analysis pipeline, which requires four primary sources that cannot be redistributed: the Korean National Pension Service establishment register, KRX adjusted price series, and two commercial financial and deal databases. DART electronic disclosures are public and each filing used is identified by its receipt number in the code.</p><p>Firm-level derived files are deliberately excluded because they are built from the licensed register and would identify individual employers. The artifacts are aggregate statistics only: estimates, confidence intervals, sample counts, balance diagnostics and curve grids.</p>",
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "private placements", "third-party allotment", "PIPE", "financial distress",
+    "employment", "administrative data", "Korea", "event study",
+    "distributional effects", "pseudo-event design", "replication"
+  ],
+  "creators": [
+    { "name": "PLACEHOLDER — see AUTHOR_METADATA note", "affiliation": "", "orcid": "" }
+  ],
+  "related_identifiers": [
+    { "identifier": "https://github.com/Real-K/paper_PIPE", "relation": "isSupplementTo", "scheme": "url" }
+  ],
+  "notes": "Analysis code is MIT-licensed. Result artifacts are aggregate statistics derived from licensed sources and are shared for verification of the reported results; no licensed microdata is redistributed."
+}

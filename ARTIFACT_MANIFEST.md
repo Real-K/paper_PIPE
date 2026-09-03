@@ -54,3 +54,9 @@ Aggregate result files. Every number in the paper traces to one of these. Files 
 
 | `wp14_comment_battery.json` | `cb178ad383022a71` | 7,244 | `wp14_comment_battery.py` | Referee-comment battery (2026-09-02) |
 | `wp14a_subwindow.json` | `9a2c781ea7ba0983` | 757 | `wp14a_subwindow_tails.py` | Referee-comment battery (2026-09-02) |
+| `wp15_comment2_battery.json` | `a600e106aba3553f` | 23,094 | `wp15_comment2_battery.py` | Referee-comment-2 battery (2026-09-03) |
+| `wp15b_fullboot.json` | `df4eb833da994086` | 3,340 | `wp15b_fullboot.py` | Referee-comment-2 battery (2026-09-03) |
+| `wp15c_payment.json` | `83db6d6659006302` | 2,423 | `wp15c_payment_anchor.py` | Referee-comment-2 battery (2026-09-03) |
+| `wp15d_restruct.json` | `63f6491821946e8f` | 5,081 | `wp15d_restruct_screen.py` | Referee-comment-2 battery (2026-09-03) |
+| `crossref_verify3.json` | `2bf5fc1637916b04` | 1,229 | `—` | Referee-comment-2 battery (2026-09-03) |
+| `wp15e_samestate_eb.json` | `fd8d1dcca62c792e` | 8,014 | `wp15e_samestate_eb.py` | Referee-comment-2 battery (2026-09-03) |

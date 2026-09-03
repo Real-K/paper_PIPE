@@ -1,0 +1,58 @@
+{
+ "id": "crossref_verify3",
+ "purpose": "comment2 §17 — 최근 FRL private-placement 인용 후보 서지 검증 (Crossref)",
+ "verified": [
+  {
+   "doi": "10.1016/j.frl.2025.107308",
+   "title": "Role of private placement targets in shaping long-term corporate performance",
+   "journal": "Finance Research Letters",
+   "authors": [
+    "Jun Han",
+    "Chong Xiao"
+   ],
+   "volume": "79",
+   "article": "107308",
+   "issued": [
+    [
+     2025,
+     6
+    ]
+   ]
+  },
+  {
+   "doi": "10.1016/j.frl.2026.110028",
+   "title": "When bookbuilding uncertainty hits: Pricing and real effects of primary-market uncertainty",
+   "journal": "Finance Research Letters",
+   "authors": [
+    "Koji Takahashi",
+    "Sumiko Takaoka"
+   ],
+   "volume": "100",
+   "article": "110028",
+   "issued": [
+    [
+     2026,
+     6
+    ]
+   ]
+  },
+  {
+   "doi": "10.1016/j.frl.2024.106297",
+   "title": "The impact of introducing strategic investors on corporate ESG performance—Empirical evidence from private placements in China",
+   "journal": "Finance Research Letters",
+   "authors": [
+    "Jia Liu",
+    "Yu Jin",
+    "Chengkai Xu"
+   ],
+   "volume": "70",
+   "article": "106297",
+   "issued": [
+    [
+     2024,
+     12
+    ]
+   ]
+  }
+ ]
+}

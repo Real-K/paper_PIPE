@@ -4,7 +4,7 @@ Code and result artifacts for *Rescue Premiums and Employment Tails: Third-Party
 
 ## Start here — the notebooks render on GitHub
 
-**Current FRL submission** (`notebooks_FRL/`): [`01_paper_FRL.ipynb`](notebooks_FRL/01_paper_FRL.ipynb) rebuilds Figure 1 and Table 1 of the FRL manuscript and asserts every printed number; [`02_appendix_FRL.ipynb`](notebooks_FRL/02_appendix_FRL.ipynb) does the same for appendix Tables A1–E1. The `notebooks/` folder below reflects the earlier full-length manuscript.
+**Current FRL submission** (`notebooks_FRL/`): [`01_paper_FRL.ipynb`](notebooks_FRL/01_paper_FRL.ipynb) rebuilds Figure 1 and Table 1 of the FRL manuscript and asserts every printed number; [`02_appendix_FRL.ipynb`](notebooks_FRL/02_appendix_FRL.ipynb) does the same for appendix Tables A1–E1. [`03_comment2_FRL.ipynb`](notebooks_FRL/03_comment2_FRL.ipynb) reproduces the second referee-comment battery (wp15): the unified canonical pipeline, a full-design bootstrap, rescue-purpose heterogeneity, minority-purity exclusions, a payment-date anchor, an entity-restructuring screen (with an adverse over-conditioning diagnostic reported deliberately), and an entropy-balancing upgrade of the same-state comparison; the accompanying revision notes are in `EDIT_SUGGESTIONS_2026-09-03.md`. The `notebooks/` folder below reflects the earlier full-length manuscript.
 
 | Notebook | Contents |
 |---|---|

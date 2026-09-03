@@ -1,0 +1,292 @@
+{
+ "id": "WP15d",
+ "title": "entity-restructuring 결과창 스크린 + 제외 재산출",
+ "seed": 20260903,
+ "runs": {
+  "flags": {
+   "reorg": 57,
+   "dissol": 4,
+   "ctrlchg": 69,
+   "n_primary": 210,
+   "window": "event−3d .. event+13m",
+   "source": "DART list.json (wp11o 패턴 확장)"
+  },
+  "ex_reorg": {
+   "mean": {
+    "obs": -0.0205,
+    "ci": [
+     -0.0804,
+     0.0397
+    ],
+    "sig": false
+   },
+   "median": {
+    "obs": -0.0018,
+    "ci": [
+     -0.0383,
+     0.0367
+    ],
+    "sig": false
+   },
+   "p10": {
+    "obs": -0.1369,
+    "ci": [
+     -0.2991,
+     -0.0056
+    ],
+    "sig": true
+   },
+   "p25": {
+    "obs": -0.0163,
+    "ci": [
+     -0.0991,
+     0.0454
+    ],
+    "sig": false
+   },
+   "sev50": {
+    "obs": 0.0597,
+    "ci": [
+     0.0108,
+     0.1129
+    ],
+    "sig": true
+   },
+   "sev35": {
+    "obs": 0.0664,
+    "ci": [
+     0.0069,
+     0.1304
+    ],
+    "sig": true
+   },
+   "sev25": {
+    "obs": 0.033,
+    "ci": [
+     -0.0352,
+     0.1055
+    ],
+    "sig": false
+   },
+   "n_event": 153,
+   "n_placebo": 409,
+   "n_dropped": 57
+  },
+  "ex_reorg_dissol": {
+   "mean": {
+    "obs": -0.0215,
+    "ci": [
+     -0.0852,
+     0.0386
+    ],
+    "sig": false
+   },
+   "median": {
+    "obs": -0.0024,
+    "ci": [
+     -0.0419,
+     0.0367
+    ],
+    "sig": false
+   },
+   "p10": {
+    "obs": -0.138,
+    "ci": [
+     -0.3038,
+     -0.0074
+    ],
+    "sig": true
+   },
+   "p25": {
+    "obs": -0.022,
+    "ci": [
+     -0.097,
+     0.0423
+    ],
+    "sig": false
+   },
+   "sev50": {
+    "obs": 0.0603,
+    "ci": [
+     0.0127,
+     0.1145
+    ],
+    "sig": true
+   },
+   "sev35": {
+    "obs": 0.0668,
+    "ci": [
+     0.0061,
+     0.1311
+    ],
+    "sig": true
+   },
+   "sev25": {
+    "obs": 0.035,
+    "ci": [
+     -0.0352,
+     0.1078
+    ],
+    "sig": false
+   },
+   "n_event": 151,
+   "n_placebo": 401,
+   "n_dropped": 59
+  },
+  "ex_reorg_ctrl": {
+   "mean": {
+    "obs": 0.0372,
+    "ci": [
+     -0.018,
+     0.0937
+    ],
+    "sig": false
+   },
+   "median": {
+    "obs": 0.013,
+    "ci": [
+     -0.0252,
+     0.0635
+    ],
+    "sig": false
+   },
+   "p10": {
+    "obs": 0.0674,
+    "ci": [
+     -0.1136,
+     0.149
+    ],
+    "sig": false
+   },
+   "p25": {
+    "obs": 0.0421,
+    "ci": [
+     -0.0321,
+     0.0999
+    ],
+    "sig": false
+   },
+   "sev50": {
+    "obs": 0.0215,
+    "ci": [
+     -0.021,
+     0.0694
+    ],
+    "sig": false
+   },
+   "sev35": {
+    "obs": -0.014,
+    "ci": [
+     -0.0655,
+     0.0399
+    ],
+    "sig": false
+   },
+   "sev25": {
+    "obs": -0.0602,
+    "ci": [
+     -0.1245,
+     0.0064
+    ],
+    "sig": false
+   },
+   "n_event": 113,
+   "n_placebo": 316,
+   "n_dropped": 97
+  },
+  "ex_all3": {
+   "mean": {
+    "obs": 0.0366,
+    "ci": [
+     -0.0202,
+     0.0966
+    ],
+    "sig": false
+   },
+   "median": {
+    "obs": 0.0084,
+    "ci": [
+     -0.0302,
+     0.0601
+    ],
+    "sig": false
+   },
+   "p10": {
+    "obs": 0.0657,
+    "ci": [
+     -0.1258,
+     0.1469
+    ],
+    "sig": false
+   },
+   "p25": {
+    "obs": 0.0384,
+    "ci": [
+     -0.0317,
+     0.0985
+    ],
+    "sig": false
+   },
+   "sev50": {
+    "obs": 0.0215,
+    "ci": [
+     -0.0218,
+     0.0707
+    ],
+    "sig": false
+   },
+   "sev35": {
+    "obs": -0.0144,
+    "ci": [
+     -0.0657,
+     0.0415
+    ],
+    "sig": false
+   },
+   "sev25": {
+    "obs": -0.0614,
+    "ci": [
+     -0.124,
+     0.0051
+    ],
+    "sig": false
+   },
+   "n_event": 112,
+   "n_placebo": 312,
+   "n_dropped": 98
+  },
+  "tail_overlap": {
+   "cut": -0.35,
+   "by_flag": {
+    "reorg": {
+     "severe": 14,
+     "severe_n": 35,
+     "severe_share": 0.4,
+     "nonsevere": 43,
+     "nonsevere_n": 175,
+     "nonsevere_share": 0.2457
+    },
+    "dissol": {
+     "severe": 1,
+     "severe_n": 35,
+     "severe_share": 0.0286,
+     "nonsevere": 3,
+     "nonsevere_n": 175,
+     "nonsevere_share": 0.0171
+    },
+    "ctrlchg": {
+     "severe": 25,
+     "severe_n": 35,
+     "severe_share": 0.7143,
+     "nonsevere": 44,
+     "nonsevere_n": 175,
+     "nonsevere_share": 0.2514
+    }
+   },
+   "note": "severe 35건 중 ctrlchg(+13m) 71.4% vs non-severe 25.1% — control 전환이 severe tail 에 집중. ctrlchg 는 법인 등록을 바꾸지 않으므로 측정 아티팩트가 아니라 사후 결과(post-event outcome). 이를 제외하는 것은 현상 자체를 제거하는 과잉조건화 — 측정 표적 스크린은 reorg(+dissol)."
+  },
+  "interpretation": "측정표적(reorg 57 제외): p10 -0.1369[-0.2991,-0.0056]✓ · sev35 +0.0664[0.0069,0.1304]✓ — 유지. ctrlchg 포함 제외(97~98 제외)는 대조 소멸(p10 +0.066 ns) — adverse 결과로 보존·보고. 단 ctrlchg 는 outcome window 의 사후 사건이며 severe tail 과 공행(71% vs 25%)하므로 이 소멸은 measurement 반박이 아니라 post-treatment conditioning 진단으로 해석."
+ },
+ "verdict": "결과창 reorg 57건 제외 후 p10 -0.1369[-0.2991, -0.0056] · sev35 0.0664[0.0069, 0.1304]. 3범주 전체 제외(n_drop 98) 후 p10 0.0657[-0.1258, 0.1469].",
+ "note": "wp15d_flags.csv 는 사업자번호 포함 — 로컬 전용, 공개 저장소 반입 금지."
+}

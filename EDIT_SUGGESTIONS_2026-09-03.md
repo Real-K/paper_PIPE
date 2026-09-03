@@ -191,7 +191,7 @@ Table 1 Notes에 "estimates are unchanged in the 209 equity-only sample (Appendi
 
 **타이밍 감사 문장 추가 (i01, 2026-09-04)** — 위 EN 초안 첫 문단의 "…against 24.6% of non-severe recipients." 뒤에:
 
-> A filing-level timing audit sharpens the reading: among the 14 severe cases with a reorganization filing, the first own-firm employment crossing of −0.35 log points precedes the filing in six cases and follows it in seven, so administrative reallocation may contribute to measured severity in up to half of the flagged severe cases — which is why the reorganization-excluded contrast above is the appropriate conservative benchmark. Control-change filings, by contrast, cluster at the placement month itself (16 of 25 within two months of the announcement), well before the employment crossing accumulates.
+> A filing-level timing audit sharpens the reading: among the 14 severe cases with a reorganization filing, the first own-firm employment crossing of −0.35 log points precedes the filing in six cases and follows it in seven, so administrative reallocation may contribute to measured severity in up to half of the flagged severe cases — which is why the reorganization-excluded contrast above is the appropriate conservative benchmark. Control-change filings, by contrast, cluster at the placement month itself (15 of 25 within two months of the announcement), well before the employment crossing accumulates.
 
 [근거: `out/I01.json` — reorg drop_first 6/same 1/filing_first 7; ctrl 공시 오프셋 25건 중 16건이 m≤2; own 교차는 중위 +5개월. PARTIAL(예측 선기입: 어느 쪽도 60% 우세 아님)]
 

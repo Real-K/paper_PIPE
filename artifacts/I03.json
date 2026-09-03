@@ -1,0 +1,49 @@
+{
+  "id": "I-03",
+  "title": "rescue 상호작용 θ의 MDE(80%)",
+  "status": "OK",
+  "n": 210,
+  "estimates": {
+    "common116_sev35": {
+      "theta": 0.0153,
+      "se": 0.0741,
+      "mde80": 0.2076,
+      "beta_actual": 0.0984,
+      "mde_over_beta": 2.11
+    },
+    "common116_sev25": {
+      "theta": -0.0452,
+      "se": 0.0832,
+      "mde80": 0.2331,
+      "beta_actual": 0.127,
+      "mde_over_beta": 1.84
+    },
+    "full_unbal_sev35": {
+      "theta": -0.016,
+      "se": 0.0625,
+      "mde80": 0.1751,
+      "beta_actual": 0.1174,
+      "mde_over_beta": 1.49
+    },
+    "full_unbal_sev25": {
+      "theta": -0.0502,
+      "se": 0.0713,
+      "mde80": 0.1998,
+      "beta_actual": 0.1404,
+      "mde_over_beta": 1.42
+    },
+    "split_diff_sev35": {
+      "diff": -0.0714,
+      "sd": 0.0559,
+      "mde80": 0.1565
+    }
+  },
+  "prediction": "±14~15pp(분할차 기준, 09-04 답변)로 예측했으나 FE SE(0.074)로는 ±18~19pp 정정 예상.",
+  "verdict": "sev35 기준 감지가능 최소 이질성: FE 사양 ±0.208(20.8pp, 기저 점프 +0.098의 2.11배) · 분할차 ±0.157(15.7pp). 이 설계는 목적별 차이가 기저 점프 크기 수준이어도 검출을 보장하지 못한다 — 'purpose는 moderator로 판정 불가'가 정확한 서술이며 '무이질성'은 금지.",
+  "kill_met": false,
+  "code": "papers/P016_pipe-employment/06_code/i03_rescue_mde.py",
+  "sha256_16": "d9bfa3d1222090e7",
+  "seed": 42,
+  "runtime_s": 0.2,
+  "date": "2026-09-04"
+}

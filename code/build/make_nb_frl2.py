@@ -170,6 +170,41 @@ show(pd.DataFrame(rows), "Verified recent FRL private-placement references (Cros
 assert len(V["verified"]) == 3
 print("purpose:", V["purpose"])'''
 
+H1 = '''I1 = A("I01"); e1 = I1["estimates"]
+rows = [{"Category": lab, "n": e1[k]["n"], "Drop first": e1[k]["drop_first"], "Same month": e1[k]["same_month"],
+         "Filing first": e1[k]["filing_first"], "No own crossing": e1[k]["no_own_cross"]}
+        for k, lab in (("reorg_primary","Reorganization filings"),("ctrl_primary","Control-change filings"))]
+show(pd.DataFrame(rows), "i01. Timing audit of flagged severe cases: first own crossing of -0.35 vs first filing (window -3d..+13m)")
+assert e1["reorg_primary"]["drop_first"] == 6 and e1["reorg_primary"]["filing_first"] == 7
+assert e1["ctrl_primary"]["filing_first"] == 15
+co = e1["offsets"]["ctrl_filing_m"]
+print(f"control-change filing offsets: {sum(1 for m in co if m <= 2)}/{len(co)} within 2 months of the placement (cluster at the event)")
+print(f"own-firm crossings occur at months {min(e1['offsets']['own_cross_m'])}..{max(e1['offsets']['own_cross_m'])} (median ~+5) - deep contraction builds slowly")
+print("verdict:", I1["status"], "-", I1["verdict"])
+print("reading: administrative reallocation may contribute to measured severity in up to half of the reorg-flagged severe")
+print("cases; the reorganization-excluded contrast is therefore the appropriate conservative benchmark.")'''
+
+H2 = '''I2 = A("I02"); e2 = I2["estimates"]
+rows = [{"Statistic": lab, "obs": f4(e2[k]["obs"]), "Full-design CI (B=1000)": ci4(e2[k]["ci"]),
+         "sig": e2[k]["sig"]} for k, lab in (("mean","Mean"),("median","Median"),("p10","Tenth percentile"),
+                                             ("p25","Twenty-fifth pct"),("sev35","Severe excess -0.35"))]
+show(pd.DataFrame(rows), "i02. Common 116-firm sample under the full-design bootstrap - PRE-REGISTERED KILL, preserved")
+assert not e2["p10"]["sig"] and not e2["sev35"]["sig"] and I2["status"] == "KILL"
+print("prediction (written before running):", I2["prediction"])
+print(f"reference firm-clustered CIs: p10 {e2['ref_cluster_ci']['p10']}, sev35 {e2['ref_cluster_ci']['sev35']} (both exclude 0)")
+print("consequence: the common-sample result stays a composition diagnostic under the firm-clustered scheme;")
+print("it is NOT promoted to co-primary evidence (revision notes, block 5).")'''
+
+H3 = '''I3 = A("I03"); e3 = I3["estimates"]
+rows = [{"Specification": k, "theta": f4(e3[k]["theta"]), "SE": e3[k]["se"], "MDE(80%)": f"±{e3[k]['mde80']:.4f}",
+         "MDE / actual jump": e3[k]["mde_over_beta"]}
+        for k in ("common116_sev35","common116_sev25","full_unbal_sev35","full_unbal_sev25")]
+show(pd.DataFrame(rows), "i03. Minimum detectable rescue interaction at 80% power")
+sp = e3["split_diff_sev35"]; print(f"split contrast: diff {f4(sp['diff'])}, sd {sp['sd']}, MDE80 ±{sp['mde80']:.4f}")
+okp(e3["common116_sev35"]["mde80"], 0.2076); okp(sp["mde80"], 0.1565)
+print("reading: the design cannot detect purpose heterogeneity smaller than ~16-21pp - about twice the actual-date")
+print("jump - so 'not established as a moderator' is the correct claim; 'no heterogeneity' is not licensed.")'''
+
 build(os.path.join("notebooks_FRL", "03_comment2_FRL.ipynb"),
       "# Comment-2 robustness and unification package",
       ["This notebook reproduces the second referee-comment battery (wp15 series) from aggregate artifacts:",
@@ -188,5 +223,11 @@ build(os.path.join("notebooks_FRL", "03_comment2_FRL.ipynb"),
        (["## 6. Payment-date anchor"], P2),
        (["## 7. Entity-restructuring screen (outcome window)"], M1),
        (["## 8. Same-state comparison: entropy balancing and weight re-estimation"], S1),
-       (["## 9. Verified FRL references"], X1)])
+       (["## 9. Verified FRL references"], X1),
+       (["## 10. Follow-up harness (i01-i03, 2026-09-04): timing audit, common-sample full-design bootstrap, rescue MDE",
+         "Predictions were written into each script before running. i02's pre-registered kill condition fired and is",
+         "preserved: the common 116-firm sample loses significance under the full-design scheme, so it stays a",
+         "composition diagnostic rather than co-primary evidence."], H1),
+       ([""], H2),
+       ([""], H3)])
 print("done")

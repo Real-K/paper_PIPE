@@ -100,7 +100,7 @@
 **부록 신규 소절(EN)**:
 
 > B.4.1. Full-design bootstrap
-> The firm-clustered bootstrap resamples recipients but holds the estimated propensity model, the common-support boundary, and the matched sets fixed, and it does not reflect the reuse of comparison firms across recipients and pseudo-dates. As a stricter scheme, we re-draw the 210 recipients and the comparison pool separately at the firm level in each of 1,000 replications and re-estimate the propensity model, common support, caliper, and nearest-neighbor sets before recomputing every statistic. The tenth-percentile contrast is −0.253 [−0.347, −0.063] and the severe-contraction excess at −0.35 is 10.2 percentage points [3.1, 15.5]; the excesses at −0.25 and −0.50 remain positive as well ([2.4, 17.8] and [2.0, 11.7]). Two weaker margins move: the mean contrast interval becomes [−0.105, +0.013] and the twenty-fifth-percentile interval [−0.157, +0.012], both now covering zero. The uniform band over the threshold grid remains above zero for all cutoffs from −0.60 through −0.30. The paper's tail statements rest on the tenth percentile and the severe-contraction excess, which survive the stricter scheme.
+> The firm-clustered bootstrap resamples recipients but holds the estimated propensity model, the common-support boundary, and the matched sets fixed, and it does not reflect the reuse of comparison firms across recipients and pseudo-dates. As a stricter scheme, we re-draw the 210 recipients and the comparison pool separately at the firm level in each of 1,000 replications and re-estimate the propensity model, common support, caliper, and nearest-neighbor sets before recomputing every statistic. The tenth-percentile contrast is −0.253 [−0.347, −0.063] and the severe-contraction excess at −0.35 is 10.2 percentage points [3.1, 15.5]; the excesses at −0.25 and −0.50 remain positive as well ([2.4, 17.8] and [2.0, 11.7]). Two weaker margins move: the mean contrast interval becomes [−0.105, +0.013] and the twenty-fifth-percentile interval [−0.157, +0.012], both now covering zero. In the common 116-firm sample the full-design intervals widen enough to cover zero (tenth percentile [−0.306, +0.066]; severe excess [−0.011, +0.135]), so the balanced-sample result is reported as a composition diagnostic under the firm-clustered scheme rather than as co-primary evidence. The uniform band over the threshold grid remains above zero for all cutoffs from −0.60 through −0.30. The paper's tail statements rest on the full-sample tenth percentile and severe-contraction excess, which survive the stricter scheme.
 
 **표 구조 (Table B7 제안)**:
 
@@ -116,23 +116,21 @@ Notes 문구: "The full-design bootstrap re-draws recipient and comparison firms
 
 **정직 보고 의무**: p25가 0을 포함하게 되는 변화를 숨기지 말 것(위 문구에 포함됨). 이에 따라 본문 §3.2의 p25 문장("The twenty-fifth percentile lies between them at −0.064 [−0.158, −0.000].")에 다음 반문장 추가 권고: "…, though this margin does not survive the stricter full-design bootstrap reported in Appendix B."
 
-## 5. Common 116-firm sample 승격 (comment2 §6)
+## 5. Common 116-firm sample — 승격 철회, composition 진단으로 유지 (comment2 §6 · **i02 KILL 반영, 2026-09-04**)
 
-**위치 1 — Table 1 Panel A**: 열 추가(정본 세트).
+⚠️ **2026-09-04 갱신**: comment2 §6은 common 116을 Table 1 co-primary로 승격하라고 권고했고 초판 제안(09-03)도 그랬으나, **후속 하네스 i02(common 116 full-design bootstrap, B=1000)에서 사전 등록한 기각조건이 발동**했다: p10 −0.2193 [−0.3063, +0.0655] · sev35 +0.1056 [−0.0107, +0.1345] — 둘 다 0 포함. 116개 기업 재표본 + 매칭 재추정 하에서는 공동주요 증거로서의 정밀도가 없다. **따라서 Table 1 열 추가(승격)는 하지 않는다.** 현행 구조(B3 표 + §3.2 한 문장)를 유지하고 아래만 반영한다.
 
-| Statistic | Full sample (210 vs 561) | Common 116-firm sample |
-|---|---|---|
-| Mean | −0.0481 [−0.1026, +0.0040] | −0.0616 [−0.1261, −0.0006] |
-| Tenth percentile | −0.2527 [−0.3713, −0.0953] | −0.2193 [−0.4062, −0.0709] |
-| Twenty-fifth percentile | −0.0641 [−0.1576, −0.0001] | −0.0816 [−0.2063, −0.0038] |
-| Median | −0.0036 [−0.0375, +0.0249] | −0.0207 [−0.0569, +0.0163] |
-| Severe excess at −0.35 | +0.1025 [+0.0477, +0.1576] | +0.1056 [+0.0366, +0.1789] |
+**위치 1 — §3.2 문장 교체(승격 없는 버전).** "Restricting the analysis to the 116 recipients … −0.219 [−0.406, −0.071], so the pattern is not an artifact of the changing pseudo-event sample." →
 
-(공통표본 mean~median 값은 기존 B3와 동일 소스(wp13c); severe 행만 wp15 신규.)
+> The full sample carries the paper's precision; the 116 recipients observed at all five dates provide a composition diagnostic: comparing the same eventual recipients with themselves at four earlier clocks, the pooled tenth-percentile contrast is −0.219 [−0.406, −0.071] with a severe-contraction excess of 10.6 percentage points [3.7, 17.9] under the firm-clustered bootstrap. Composition change across clocks does not generate the tail, although this smaller sample loses precision under the stricter full-design scheme reported in Appendix B.
 
-**위치 2 — §3.2 문장 교체.** "Restricting the analysis to the 116 recipients … −0.219 [−0.406, −0.071], so the pattern is not an artifact of the changing pseudo-event sample." →
+**위치 2 — B.4.1(full-design 소절, 본 문서 §4)에 정직 문장 추가**:
 
-> The full sample is the precision estimate; the balanced sample is the timing diagnostic. Restricting every clock to the 116 recipients observed at all five dates — the same eventual recipients compared with themselves at four earlier clocks — the pooled tenth-percentile contrast is −0.219 [−0.406, −0.071] and the severe-contraction excess is 10.6 percentage points [3.7, 17.9]. Composition change across clocks does not generate the tail.
+> In the common 116-firm sample the full-design intervals widen enough to cover zero (tenth percentile [−0.306, +0.066]; severe excess [−0.011, +0.135]), so the balanced-sample result is reported as a composition diagnostic under the firm-clustered scheme rather than as co-primary evidence.
+
+**위치 3 — B3 표에 severe 행만 추가(군집부트, 출처 wp15)**: full +0.1025 [+0.0477, +0.1576] · common +0.1056 [+0.0366, +0.1789].
+
+[근거: `out/I02.json` (prediction 선기입 → KILL; 규칙 11·가드레일 7 — KILL은 표현만 바꿔 되살리지 않는다)]
 
 ## 6. Rescue-purpose 이질성 (comment2 §7)
 
@@ -153,6 +151,12 @@ Notes 문구: "The full-design bootstrap re-draws recipient and comparison firms
 Notes: "Firm and event-clock fixed effects; standard errors clustered by firm. Rescue is a firm-level stated-purpose indicator absorbed by the firm effects; θ is identified from within-firm variation across clocks."
 
 **어휘 주의(규칙 11)**: θ의 CI가 넓으므로 "no heterogeneity"라고 쓰지 말 것 — "the data do not establish purpose as a moderator"까지만. 이질성 추가 분할(owner/industry/size/…) 금지 — comment2 §7 자신이 specification mining 경고.
+
+**MDE 병기 (i03, 2026-09-04)** — 위 본문 문단 마지막 문장 뒤에 추가:
+
+> The design's minimum detectable interaction at 80% power is roughly ±21 percentage points in the fixed-effects specification (±16 points for the split contrast) — about twice the actual-date jump itself — so the absence of a detected difference bounds neither direction economically.
+
+[근거: `out/I03.json` — MDE80: FE common116 ±0.2076(β의 2.11배)·full ±0.1751·분할차 ±0.1565]
 
 ## 7. Minority purity — equity-only·stake·control (comment2 §8·§9)
 
@@ -184,6 +188,12 @@ Table 1 Notes에 "estimates are unchanged in the 209 equity-only sample (Appendi
 > D.3. Entity-restructuring screen
 > Because NPS employment is recorded at the legal-entity registration number, a merger, division, or business transfer can reduce measured employment without an equivalent economy-wide job loss. A DART screen over each recipient's window from three days before the announcement through thirteen months after flags 57 of 210 recipients with a merger, division, business- or asset-transfer, or share-exchange filing. Excluding all 57, the pooled tenth-percentile contrast is −0.137 [−0.299, −0.006] and the severe-contraction excess 6.6 percentage points [0.7, 13.0]; adding the four dissolution-related filers changes little (−0.138 [−0.304, −0.007]). The excess tail is therefore not an artifact of legal-entity reorganizations alone, although reorganization events account for part of its magnitude: 14 of the 35 severe relative contractions carry such a filing, against 24.6% of non-severe recipients.
 > Control-change filings behave differently. Sixty-nine recipients have a largest-shareholder-change or management-control filing in the same window, and these filings concentrate sharply in the severe tail (25 of 35 severe cases, versus 25.1% of the rest). A control change does not move workers off the entity's registration, so it is not a measurement artifact; it is part of the post-placement adjustment the paper measures. Excluding these firms as well removes 97 of 210 recipients and, mechanically, the tail contrast (+0.07 [−0.11, +0.15]). We report this as a conditioning diagnostic rather than a robustness requirement: dropping firms because severe adjustment materialized conditions the sample on the outcome. Read jointly, severe post-placement contractions frequently coincide with subsequent control transitions — consistent with the placement marking entry into a restructuring region — while the measurement-specific screen (reorganization filings) leaves the tail intact.
+
+**타이밍 감사 문장 추가 (i01, 2026-09-04)** — 위 EN 초안 첫 문단의 "…against 24.6% of non-severe recipients." 뒤에:
+
+> A filing-level timing audit sharpens the reading: among the 14 severe cases with a reorganization filing, the first own-firm employment crossing of −0.35 log points precedes the filing in six cases and follows it in seven, so administrative reallocation may contribute to measured severity in up to half of the flagged severe cases — which is why the reorganization-excluded contrast above is the appropriate conservative benchmark. Control-change filings, by contrast, cluster at the placement month itself (16 of 25 within two months of the announcement), well before the employment crossing accumulates.
+
+[근거: `out/I01.json` — reorg drop_first 6/same 1/filing_first 7; ctrl 공시 오프셋 25건 중 16건이 m≤2; own 교차는 중위 +5개월. PARTIAL(예측 선기입: 어느 쪽도 60% 우세 아님)]
 
 **표 구조 (Table D2 제안)**:
 
@@ -317,8 +327,8 @@ Conclusion 마지막 문단은 현행 유지(두 번째이자 마지막 반복).
 
 ## 19. Main exhibit 구조 (comment2 §23)
 
-- **Figure 1**: 통일 파이프라인 수준 그림(위 §3(b)) — centerpiece 유지, caption에 common-sample 수치.
-- **Table 1 Panel A**: full + common 116(위 §5) + severe 행.
+- **Figure 1**: 통일 파이프라인 수준 그림(위 §3(b)) — centerpiece 유지, caption에 common-sample 수치(군집부트, robustness 언급).
+- **Table 1 Panel A**: full 표본 단독 + severe 행. common 116 열 추가는 **하지 않음**(i02 KILL — 위 §5); common은 B3 + §3.2 한 문장 유지.
 - **Table 1 Panel B**: same-state 현행 유지(+ EB 반문장 참조).
 - **Panel C(선택)**: rescue 상호작용(위 §6) — 또는 본문 한 문단으로 대체.
 - 부록행: permutation·prediction benchmarks·max-t·동시공시·LOO·flow 분해·full-design bootstrap·EB·restructuring screen·payment anchor. 본문 가시 복잡도는 늘리지 않는다.
@@ -359,3 +369,6 @@ Conclusion 마지막 문단은 현행 유지(두 번째이자 마지막 반복).
 | `…/wp15e_samestate_eb.json` | entropy balancing + 가중 재추정 부트 |
 | `…/crossref_verify3.json` | FRL 인용 3건 서지 검증 |
 | repo `notebooks_FRL/03_comment2_FRL.ipynb` | 위 전부 저장출력 + 인쇄수치 assert |
+| `…/out/I01.json` (2026-09-04) | 타이밍 감사: reorg∩severe 14 = drop_first 6·filing_first 7 (PARTIAL) · ctrl 공시는 placement월 군집 |
+| `…/out/I02.json` (2026-09-04) | common116 full-design 부트 **KILL** — p10 [−0.306, +0.066]·sev35 [−0.011, +0.135] 0 포함 → §5 승격 철회 |
+| `…/out/I03.json` (2026-09-04) | rescue θ MDE80: FE ±20.8pp(β의 2.1배)·분할 ±15.7pp → §6 MDE 병기 |

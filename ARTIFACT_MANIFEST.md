@@ -60,3 +60,6 @@ Aggregate result files. Every number in the paper traces to one of these. Files 
 | `wp15d_restruct.json` | `63f6491821946e8f` | 5,081 | `wp15d_restruct_screen.py` | Referee-comment-2 battery (2026-09-03) |
 | `crossref_verify3.json` | `2bf5fc1637916b04` | 1,229 | `—` | Referee-comment-2 battery (2026-09-03) |
 | `wp15e_samestate_eb.json` | `fd8d1dcca62c792e` | 8,014 | `wp15e_samestate_eb.py` | Referee-comment-2 battery (2026-09-03) |
+| `I01.json` | `a1b4c8080f7940de` | 2,731 | `i01_severe_timing_audit.py` | Follow-up harness (2026-09-04) — i02 is a preserved pre-registered KILL |
+| `I02.json` | `951a7e2fa7b6aabe` | 1,611 | `i02_common116_fullboot.py` | Follow-up harness (2026-09-04) — i02 is a preserved pre-registered KILL |
+| `I03.json` | `b561799c5a683705` | 1,493 | `i03_rescue_mde.py` | Follow-up harness (2026-09-04) — i02 is a preserved pre-registered KILL |
